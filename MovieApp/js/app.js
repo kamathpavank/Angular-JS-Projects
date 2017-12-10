@@ -5,7 +5,7 @@ app.factory('GetData',function($http){
   return{
     //get data of movies from api
     movieData: function(type,passdata,response){
-      var urlLink = "https://api.cinemalytics.com/v1/movie/" + "/" +passdata+ ""
+      var urlLink = "https://api.cinemalytics.com/v1/movie/" + "/" +passdata+ "/?auth_token=1EFAE82FE7F4F8E6813FD4FA429E5170";
       $http.get(urlLink).success(response);
     }
   }
