@@ -20,12 +20,29 @@
 <head>
 <body ng-app="gameApp" ng-controller="GameController">
 <div>
+	<div>
+		Guesses Left : {{guesses}}
+	</div>
+
+	<div>
+		Incorrect Guesses : <span ng-repeat="Letter in incorrectLettersChosen">{{letter}}</span>
+	</div>
+
+	<div>
+		Correct Guesses : <span ng-repeat="Letter in correctLettersChosen">{{letter}}</span>
+	</div>
 	<!-- Word to guess -->
 	<div>
 		Guess : {{displayWord}}
 	</div>
 
+		<div>
+			<div>
+				<input type="text" name="guess" ng-model="input.letter">
 
+				<button ng-click="letterChosen()">Submit</button>
+			</div>
+		</div>
 </div>		
 
 </body>

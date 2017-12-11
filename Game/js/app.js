@@ -36,5 +36,9 @@ app.controller("GameController",function($scope){
 		$scope.displayWord = tempDisplayWord;
 	}
 
+	$scope.letterChosen = function(){
+			
+	}
+
 	newGame();
 });
